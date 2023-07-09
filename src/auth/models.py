@@ -30,6 +30,7 @@ class User(Base):  # user model for db
     discounts = Column(JSON, default={}, nullable=True)
     address = Column(String(256), nullable=True)
     sell = Column(Boolean, default=False)
+    verify_char = Column(String, nullable=True)
     is_active = Column(Boolean, default=True)
     is_superuser = Column(Boolean, default=False)
     is_verified = Column(Boolean, default=False)

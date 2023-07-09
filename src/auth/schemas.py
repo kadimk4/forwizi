@@ -16,8 +16,8 @@ class UserRead(schemas.BaseUser[int]):
     registred: datetime
     cards: list[str] | None
     phone: str | None
-    address: str
-    discount: list[str]
+    address: str | None
+    discount: list[str] | None
     # is_active: bool = True
     # is_superuser: bool = False
     is_verified: bool = False
@@ -83,7 +83,7 @@ class Tags(str, Enum):
 
 class Product(BaseModel):
     name: str
-    quanity: int = 1
+    quanity: int
     price: float = 1
     discount: float | None = 1
 
